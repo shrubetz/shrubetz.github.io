@@ -14,7 +14,8 @@ for(x=0;x<=7;x++){
 	   ctx.arc(x*100+50,y*100+50,40,0,2*Math.PI);
 	   ctx.fill();
        ctx.stroke();
-	  board[x][y]=0;
+	  alert("here");
+	  board [x][y]=0;
 	  alert(board[x][y]+"");
 	   
   }
