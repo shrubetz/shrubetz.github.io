@@ -16,7 +16,7 @@ for(x=0;x<=7;x++){
        ctx.stroke();
 	  alert("here");
 	  board [x][y]=0;
-	  alert(board[x][y]+"");
+	 // alert(board[x][y]+"");
 	   
   }
 }
