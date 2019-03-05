@@ -38,12 +38,13 @@ $("#myCanvas").click(function(e){
 
 	//alert(cordy+" " + cordx);
       if (board[cordx,cordy]==0)
-      { ctx.fillStyle = choosecolor();
+      { board[cordx,cordy]=1;
+	      ctx.fillStyle = choosecolor();
 	   ctx.beginPath();
        ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
 	  ctx.fill();
        ctx.stroke();
-      board[cordx,cordy]=1;
+      
       }
 	else{alert(cordx+" "+cordy)}
 	});
