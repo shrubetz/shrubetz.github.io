@@ -37,7 +37,7 @@ $("#myCanvas").click(function(e){
     var cordx = Math.floor((e.pageX-$("#myCanvas").offset().left) / 100);
 
 	//alert(cordy+" " + cordx);
-      if (board[cordx,cordy]=0)
+      if (board[cordx,cordy]==0)
       { ctx.fillStyle = choosecolor();
 	   ctx.beginPath();
        ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
