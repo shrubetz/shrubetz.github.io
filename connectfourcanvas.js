@@ -6,15 +6,15 @@ ctx.fillStyle="yellow";
 ctx.fillRect(0, 0, 700, 600);
 
 
-for(x=0;x<=7;x++){
-  for(y=0;y<=6;y++){   
+for(x=0;x<7;x++){
+  for(y=0;y<6;y++){   
        ctx.fillStyle = "white";
 	   //ctx.fillRect(x*100+10, y*100+10, 80, 80); 
 	   ctx.beginPath();
 	   ctx.arc(x*100+50,y*100+50,40,0,2*Math.PI);
 	   ctx.fill();
        ctx.stroke();
-	  alert("here");
+	 
 	  board [x][y]=0;
 	 // alert(board[x][y]+"");
 	   
@@ -36,6 +36,7 @@ $("#myCanvas").click(function(e){
 	
     var cordx = Math.floor((e.pageX-$("#myCanvas").offset().left) / 100);
     //alert(($("#myCanvas").offset().top))
+	alert(cordy+" " + cordx);
       ctx.fillStyle = choosecolor();
 	   ctx.beginPath();
        ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
