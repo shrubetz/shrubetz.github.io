@@ -6,8 +6,8 @@ ctx.fillStyle="yellow";
 ctx.fillRect(0, 0, 700, 600);
 
 
-for(x=0;x<7;x++){
-  for(y=0;y<6;y++){   
+for(x=0;x<=7;x++){
+  for(y=0;y<=6;y++){   
        ctx.fillStyle = "white";
 	   //ctx.fillRect(x*100+10, y*100+10, 80, 80); 
 	   ctx.beginPath();
