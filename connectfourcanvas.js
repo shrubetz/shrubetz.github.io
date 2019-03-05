@@ -1,5 +1,5 @@
 
-
+var board [];
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var colblue=1;
@@ -15,6 +15,8 @@ for(x=0;x<=7;x++){
 	   ctx.arc(x*100+50,y*100+50,40,0,2*Math.PI);
 	   ctx.fill();
        ctx.stroke();
+	  board[x,y]=0;
+	  alert(board[x,y]+"");
 	   
   }
 }
@@ -29,7 +31,8 @@ var width = 700;
 var mouseClicked = false, mouseReleased = true;
 
 $("#myCanvas").click(function(e){
-	var cordy = Math.floor((e.pageY-$("#myCanvas").offset().top) / 100);
+	
+    var cordy = Math.floor((e.pageY-$("#myCanvas").offset().top) / 100);
 	
     var cordx = Math.floor((e.pageX-$("#myCanvas").offset().left) / 100);
     //alert(($("#myCanvas").offset().top))
