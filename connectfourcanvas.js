@@ -8,7 +8,7 @@ ctx.fillRect(0, 0, 700, 600);
 
 for(x=0;x<7;x++){
   for(y=0;y<6;y++){  
-	   board[x,y]=0;
+	   board[x][y]=0;
        ctx.fillStyle = "white";
 	   //ctx.fillRect(x*100+10, y*100+10, 80, 80); 
 	   ctx.beginPath();
@@ -35,10 +35,10 @@ $("#myCanvas").click(function(e){
     var cordy = Math.floor((e.pageY-$("#myCanvas").offset().top) / 100);
 	
     var cordx = Math.floor((e.pageX-$("#myCanvas").offset().left) / 100);
-    alert(board[cordx,cordy])
+    //alert(board[cordx,cordy])
 	//alert(cordy+" " + cordx);
-      if (board[cordx,cordy]==0)
-      { board[cordx,cordy]=1;
+      if (board[cordx][cordy]==0)
+      { board[cordx][cordy]=1;
 	      ctx.fillStyle = choosecolor();
 	   ctx.beginPath();
        ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
