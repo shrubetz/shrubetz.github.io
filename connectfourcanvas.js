@@ -7,14 +7,15 @@ ctx.fillRect(0, 0, 700, 600);
 
 
 for(x=0;x<7;x++){
-  for(y=0;y<6;y++){   
+  for(y=0;y<6;y++){  
+	   board[x][y]=0;
        ctx.fillStyle = "white";
 	   //ctx.fillRect(x*100+10, y*100+10, 80, 80); 
 	   ctx.beginPath();
 	   ctx.arc(x*100+50,y*100+50,40,0,2*Math.PI);
 	   ctx.fill();
        ctx.stroke();
-	//  board[x][y]=0;
+	// board[x][y]=0;
 	 // alert(board[x][y]+"");
 	   
   }
