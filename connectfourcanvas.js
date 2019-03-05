@@ -35,7 +35,7 @@ $("#myCanvas").click(function(e){
     var cordy = Math.floor((e.pageY-$("#myCanvas").offset().top) / 100);
 	
     var cordx = Math.floor((e.pageX-$("#myCanvas").offset().left) / 100);
-
+    alert(board[cordx,cordy])
 	//alert(cordy+" " + cordx);
       if (board[cordx,cordy]==0)
       { board[cordx,cordy]=1;
@@ -46,7 +46,7 @@ $("#myCanvas").click(function(e){
        ctx.stroke();
       
       }
-	else{alert(board[cordx,cordy]+" "+ board[cordx][cordy])}
+	else{alert(board[cordx,cordy]+"in else")}
 	});
 
 function choosecolor(){
