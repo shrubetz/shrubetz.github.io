@@ -37,11 +37,14 @@ $("#myCanvas").click(function(e){
     var cordx = Math.floor((e.pageX-$("#myCanvas").offset().left) / 100);
 
 	//alert(cordy+" " + cordx);
-      ctx.fillStyle = choosecolor();
+      if (board[cordx,cordy]=0)
+      { ctx.fillStyle = choosecolor();
 	   ctx.beginPath();
        ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
 	  ctx.fill();
        ctx.stroke();
+      board[cordx,cordy]=1;
+      }
 	});
 
 function choosecolor(){
