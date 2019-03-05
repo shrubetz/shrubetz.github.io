@@ -45,6 +45,7 @@ $("#myCanvas").click(function(e){
        ctx.stroke();
       board[cordx,cordy]=1;
       }
+	else{alert(board[cordx,cordy])}
 	});
 
 function choosecolor(){
