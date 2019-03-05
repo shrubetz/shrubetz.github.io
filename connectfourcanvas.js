@@ -47,7 +47,7 @@ function choosecolor(){
 if (colblue==1)
 {
 	colblue=0;
-	return "blue";
+	return "green";
 	
 }
 else
