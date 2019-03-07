@@ -3,6 +3,7 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var player=0;
 var colblue=1;
+
 ctx.fillStyle="yellow";
 ctx.fillRect(0, 0, 700, 600);
 
@@ -24,7 +25,7 @@ var mouseClicked = false, mouseReleased = true;
 
 $("#myCanvas").click(function(e){
 	
-    var cordy = Math.floor((e.pageY-$("#myCanvas").offset().top) / 100);
+    var cordy=0;// = Math.floor((e.pageY-$("#myCanvas").offset().top) / 100);
 	
     var cordx = Math.floor((e.pageX-$("#myCanvas").offset().left) / 100);
     //alert(board[cordx,cordy])
@@ -34,7 +35,21 @@ $("#myCanvas").click(function(e){
        cordy=checkBelow(cordx,cordy);
 	      
 	     drawturn(cordx,cordy);
-	      sleep(1000);
+	      if (colblue==1)
+{
+	board[cordx][cordy]=1;
+	
+	 
+	
+}
+else
+{
+	board[cordx][cordy]=2;
+	
+	 
+	
+}
+	      //sleep(1000);
 	   
       }
 	
@@ -59,7 +74,7 @@ function isWinner()
 function choosecolor(cordx,cordy){
 if (colblue==1)
 {
-	board[cordx][cordy]=1;
+	//board[cordx][cordy]=1;
 	colblue=0;
 	return "green";
 	 
@@ -67,7 +82,7 @@ if (colblue==1)
 }
 else
 {
-	board[cordx][cordy]=2;
+	//board[cordx][cordy]=2;
 	colblue=1;
 	return "red";
 	 
@@ -84,11 +99,28 @@ function drawturn(cordx,cordy)
        ctx.stroke();
 }
 
+function animateTurn(cordx,cordy,color)
+{ 
+	  ctx.fillStyle = color;
+	   ctx.beginPath();
+       ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
+	  ctx.fill();
+       ctx.stroke();
+}
+
+
 function checkBelow(x,y){
 if (y<5)
-{
+{     var color= chooseColor;
 	while(board[x][y+1]==0)
-	{y++;}
+		
+	{
+	if(x>=0 && y>=0)
+	     animateTurn(x-1,y-1,white)
+	     animateTurn(x,y,color)
+	      sleep(1000);
+		y++;
+	}
 }
 	return y;
 }
