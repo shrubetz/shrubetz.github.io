@@ -39,9 +39,10 @@ $("#myCanvas").click(function(e){
     //alert(board[cordx,cordy])
 	//alert(cordy+" " + cordx);
       if (board[cordx][cordy]==0)
-      { board[cordx][cordy]=1;
+      { 
        cordy=checkBelow(cordx,cordy);
 	     drawturn(cordx,cordy);
+	      board[cordx][cordy]=1;
       
       }
 	else{}
