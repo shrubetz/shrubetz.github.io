@@ -1,6 +1,7 @@
 var board= [];
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
+var player=1;
 var colblue=1;
 ctx.fillStyle="yellow";
 ctx.fillRect(0, 0, 700, 600);
@@ -42,8 +43,9 @@ $("#myCanvas").click(function(e){
       { 
        cordy=checkBelow(cordx,cordy);
 	     drawturn(cordx,cordy);
-	     if (checkWinner(board) !=0)
-	     {alert("player" + checkWinner);}
+	      player=checkWinner(board) 
+	     if (player !=0)
+	     {alert("player " + player);}
       
       }
 	else{}
