@@ -44,7 +44,7 @@ $("#myCanvas").click(function(e){
        cordy=checkBelow(cordx,cordy);
 	      
 	     drawturn(cordx,cordy);
-	      alert(board[cordx][cordy])
+	      
 	    //  player=checkWinner(board) 
 	   //  if (player !=0)
 	   //  {alert("player " + player);}
@@ -66,12 +66,14 @@ else
 	colblue=1;
 	return "red";
 	 board[cordx][cordy]=2;
+	
 }
 
 }
 function drawturn(cordx,cordy)
 {
 	  ctx.fillStyle = choosecolor();
+	   alert(board[cordx][cordy])
 	   ctx.beginPath();
        ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
 	  ctx.fill();
