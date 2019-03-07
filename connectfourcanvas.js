@@ -1,7 +1,7 @@
 var board= [];
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-var player=1;
+var player=0;
 var colblue=1;
 ctx.fillStyle="yellow";
 ctx.fillRect(0, 0, 700, 600);
@@ -96,31 +96,31 @@ function checkWinner() {
     for (x = 0; x < 3; x++){
 	for (y= 0; y < 7; y++){
 	    if (checkLine(board[x][y], board[x+1][y], board[x+2][y], board[x+3][y])){
-		return board[x][y];
+		player= board[x][y];
 	    }}}
 
     // Check right
     for (x = 0; x < 6; x++){
         for (y = 0; y < 4; y++){
             if (checkLine(board[x][y], board[x][y+1], board[x][y+2], board[x][y+3])){
-                //return board[x][y];
+                player= board[x][y];
 	    }}}
 
     // Check down-right
     for (x = 0; x < 3; x++){
         for (y = 0; y < 4; y++){
             if (checkLine(board[x][y], board[x+1][y+1], board[x+2][y+2], board[x+3][y+3])){
-                //return board[x][y];
+                player= board[x][y];
 	    }}}
 
     // Check down-left
     for (x = 3; x < 6; x++){
         for (y = 0; y < 4; y++){
             if (checkLine(board[x][y], board[x-1][y+1], board[x-2][y+2], board[x-3][y+3])){
-               // return board[x][y];
+               player= board[x][y];
 	    }}}
 
-    return 0;
+    
 }
 function checkLine(a,b,c,d) {
     // Check first cell non-zero and all cells match
