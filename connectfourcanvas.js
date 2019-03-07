@@ -40,7 +40,8 @@ $("#myCanvas").click(function(e){
 	//alert(cordy+" " + cordx);
       if (board[cordx][cordy]==0)
       { board[cordx][cordy]=1;
-	     taketurn(cordx,cordy)
+       cordy=checkBelow(cordx,cordy);
+	     drawturn(cordx,cordy);
       
       }
 	else{}
@@ -60,11 +61,20 @@ else
 }
 
 }
-function taketurn(cordx,cordy)
+function drawturn(cordx,cordy)
 {
 	  ctx.fillStyle = choosecolor();
 	   ctx.beginPath();
        ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
 	  ctx.fill();
        ctx.stroke();
+}
+
+function checkBelow(x,y){
+if (y<5)
+{
+	while(board[x][y+1]==0)
+	{y++;}
+}
+	return y;
 }
