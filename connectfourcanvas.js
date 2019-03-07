@@ -83,7 +83,7 @@ if (y<5)
 	return y;
 }
 
-function chkWinner(game) {
+function checkWinner(game) {
     // Check down
     for (x = 0; x < 3; x++)
         for (y= 0; y < 7; y++)
