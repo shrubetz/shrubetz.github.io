@@ -38,8 +38,9 @@ $("#myCanvas").click(function(e){
 	     player=checkWinner() 
 	     if (player !=0)
 	    { 
-		alert("The winner is player " + player);
 		sleep(1000);
+		alert("The winner is player " + player);
+		
 	        clearBoard();
 	    }
           
