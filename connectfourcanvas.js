@@ -135,8 +135,7 @@ function clearBoard(){
        ctx.stroke();
   }
 	}
-	
+}
 	function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
-}
 }
