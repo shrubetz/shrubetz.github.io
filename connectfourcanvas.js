@@ -35,7 +35,11 @@ $("#myCanvas").click(function(e){
 	      
 	     drawturn(cordx,cordy);
 	      
-	     player=checkWinner() 
+	   
+      }
+	
+	else{}
+	  player=checkWinner() 
 	     if (player !=0)
 	    { 
 		sleep(1000);
@@ -44,8 +48,6 @@ $("#myCanvas").click(function(e){
 	        clearBoard();
 	    }
           
-      }
-	else{}
 	});
 
 function choosecolor(cordx,cordy){
