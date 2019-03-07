@@ -40,11 +40,7 @@ $("#myCanvas").click(function(e){
 	//alert(cordy+" " + cordx);
       if (board[cordx][cordy]==0)
       { board[cordx][cordy]=1;
-	      ctx.fillStyle = choosecolor();
-	   ctx.beginPath();
-       ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
-	  ctx.fill();
-       ctx.stroke();
+	     taketurn(cordx,cordy)
       
       }
 	else{}
@@ -63,4 +59,12 @@ else
 	return "red";
 }
 
+}
+function taketurn(var codx,var cody)
+{
+	  ctx.fillStyle = choosecolor();
+	   ctx.beginPath();
+       ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
+	  ctx.fill();
+       ctx.stroke();
 }
