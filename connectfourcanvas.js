@@ -12,8 +12,6 @@ ctx.fillRect(0, 0, 700, 600);
 clearBoard();
 	
 	   
-  }
-}
 
 
 var canvas = document.getElementById("myCanvas")[0];
@@ -130,5 +128,6 @@ function clearBoard(){
 	   ctx.arc(x*100+50,y*100+50,40,0,2*Math.PI);
 	   ctx.fill();
        ctx.stroke();
-	
+  }
+	}
 }
