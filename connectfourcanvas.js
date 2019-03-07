@@ -124,6 +124,6 @@ function checkWinner() {
 }
 function checkLine(a,b,c,d) {
     // Check first cell non-zero and all cells match
-	alert((a != 0) && (a ==b) && (a == c) && (a == d));
-    return ((a != 0) && (a ==b) && (a == c) && (a == d));
+	alert((a=1||a==2 ) && (a ==b) && (a == c) && (a == d));
+    return ((a == 1 || a==2) && (a ==b) && (a == c) && (a == d));
 }
