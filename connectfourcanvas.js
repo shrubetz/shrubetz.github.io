@@ -5,7 +5,7 @@ var colblue=1;
 ctx.fillStyle="yellow";
 ctx.fillRect(0, 0, 700, 600);
 
- for (var i=0;i<rows;i++) {
+ for (var i=0;i<7;i++) {
      board[i] = [];
   }
 for(x=0;x<7;x++){
