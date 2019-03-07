@@ -91,6 +91,7 @@ if (y<5)
 }
 
 function checkWinner(game) {
+	alert(game)
     // Check down
     for (x = 0; x < 3; x++)
         for (y= 0; y < 7; y++)
