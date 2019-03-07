@@ -96,7 +96,7 @@ function checkWinner() {
     for (x = 0; x < 3; x++){
 	for (y= 0; y < 7; y++){
 	    if (checkLine(board[x][y], board[x+1][y], board[x+2][y], board[x+3][y])){
-		//return board[x][y];
+		return board[x][y];
 	    }}}
 
     // Check right
