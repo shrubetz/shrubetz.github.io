@@ -45,7 +45,7 @@ $("#myCanvas").click(function(e){
 	      
 	     drawturn(cordx,cordy);
 	      
-	     player=checkWinner(board) 
+	     player=checkWinner() 
 	     if (player !=0)
 	    {alert("player " + player);}
       
