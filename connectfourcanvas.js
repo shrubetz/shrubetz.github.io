@@ -42,7 +42,8 @@ $("#myCanvas").click(function(e){
       { 
        cordy=checkBelow(cordx,cordy);
 	     drawturn(cordx,cordy);
-	      board[cordx][cordy]=1;
+	     if (checkWinner(board) !=0)
+	     {alert("player" + checkWinner);}
       
       }
 	else{}
@@ -53,12 +54,14 @@ if (colblue==1)
 {
 	colblue=0;
 	return "green";
+	 board[cordx][cordy]=1;
 	
 }
 else
 {
 	colblue=1;
 	return "red";
+	 board[cordx][cordy]=2;
 }
 
 }
@@ -78,4 +81,36 @@ if (y<5)
 	{y++;}
 }
 	return y;
+}
+
+function chkWinner(game) {
+    // Check down
+    for (x = 0; x < 3; x++)
+        for (y= 0; y < 7; y++)
+            if (checkLine(game[x][y], game[x+1][y], game[x+2][y], game[x+3][y]))
+                return game[x][y];
+
+    // Check right
+    for (x = 0; x < 6; x++)
+        for (y = 0; y < 4; y++)
+            if (checkLine(game[x][y], game[x][y+1], game[x][y+2], game[x][y+3]))
+                return game[x][y];
+
+    // Check down-right
+    for (x = 0; x < 3; x++)
+        for (y = 0; y < 4; y++)
+            if (checkLine(game[x][y], game[x+1][y+1], game[x+2][y+2], game[x+3][y+3]))
+                return game[x][y];
+
+    // Check down-left
+    for (x = 3; x < 6; x++)
+        for (y = 0; y < 4; y++)
+            if (checkLine(game[x][y], game[x-1][y+1], game[x-2][y+2], game[x-3][y+3]))
+                return game[x][y];
+
+    return 0;
+}
+function checkLine(a,b,c,d) {
+    // Check first cell non-zero and all cells match
+    return ((a != 0) && (a ==b) && (a == c) && (a == d));
 }
