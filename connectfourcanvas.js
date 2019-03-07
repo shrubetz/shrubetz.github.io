@@ -37,8 +37,10 @@ $("#myCanvas").click(function(e){
 	      
 	     player=checkWinner() 
 	     if (player !=0)
-	    {alert("The winner is player " + player);
-	     clearBoard();
+	    { 
+		alert("The winner is player " + player);
+		sleep(1000);
+	        clearBoard();
 	    }
           
       }
@@ -132,4 +134,8 @@ function clearBoard(){
        ctx.stroke();
   }
 	}
+	
+	function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 }
