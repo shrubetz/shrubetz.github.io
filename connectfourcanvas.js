@@ -53,7 +53,7 @@ $("#myCanvas").click(function(e){
 	else{}
 	});
 
-function choosecolor(){
+function choosecolor(cordx,cordy){
 if (colblue==1)
 {
 	board[cordx][cordy]=1;
@@ -74,7 +74,7 @@ else
 }
 function drawturn(cordx,cordy)
 {
-	  ctx.fillStyle = choosecolor();
+	  ctx.fillStyle = choosecolor(cordx,cordy);
 	   alert(board[cordx][cordy])
 	   ctx.beginPath();
        ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
