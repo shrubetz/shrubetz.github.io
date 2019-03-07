@@ -116,7 +116,7 @@ function checkBelow(x,y){
 	while(board[x][y+1]==0)
 		
 	{
-	if(x>=0 && y>=0)
+	if(x>0 && y>0)
 	{ animateTurn(x-1,y-1,"white");}
 		sleep(1000);
 	     animateTurn(x,y,color);
