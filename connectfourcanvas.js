@@ -56,16 +56,18 @@ $("#myCanvas").click(function(e){
 function choosecolor(){
 if (colblue==1)
 {
+	board[cordx][cordy]=1;
 	colblue=0;
 	return "green";
-	 board[cordx][cordy]=1;
+	 
 	
 }
 else
 {
+	board[cordx][cordy]=2;
 	colblue=1;
 	return "red";
-	 board[cordx][cordy]=2;
+	 
 	
 }
 
