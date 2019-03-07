@@ -1,11 +1,13 @@
-var board[7;6]= [[],[]];
+var board= [];
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var colblue=1;
 ctx.fillStyle="yellow";
 ctx.fillRect(0, 0, 700, 600);
 
-
+ for (var i=0;i<rows;i++) {
+     board[i] = [];
+  }
 for(x=0;x<7;x++){
   for(y=0;y<6;y++){  
 	   board[x][y]=0;
