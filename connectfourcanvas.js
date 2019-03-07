@@ -110,7 +110,7 @@ function animateTurn(cordx,cordy,color)
 
 
 function checkBelow(x,y){
-var color= chooseColor(x,y);
+var color= choosecolor(x,y);
 	if (y<5)
 {     
 	while(board[x][y+1]==0)
