@@ -34,21 +34,27 @@ $("#myCanvas").click(function(e){
        cordy=checkBelow(cordx,cordy);
 	      
 	     drawturn(cordx,cordy);
-	      
+	      sleep(1000);
 	   
       }
 	
 	else{}
-	  player=checkWinner() 
+	
+	isWinner();
+       
+	});
+function isWinner()
+{
+  player=checkWinner() 
 	     if (player !=0)
 	    { 
-		sleep(1000);
+		
 		alert("The winner is player " + player);
 		
-	        clearBoard();
+	          
+	       clearBoard();
 	    }
-          
-	});
+}
 
 function choosecolor(cordx,cordy){
 if (colblue==1)
