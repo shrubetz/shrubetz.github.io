@@ -42,8 +42,9 @@ $("#myCanvas").click(function(e){
       if (board[cordx][cordy]==0)
       { 
        cordy=checkBelow(cordx,cordy);
-	      alert(cordy);
+	      
 	     drawturn(cordx,cordy);
+	      alert(board[cordx,cordy])
 	    //  player=checkWinner(board) 
 	   //  if (player !=0)
 	   //  {alert("player " + player);}
