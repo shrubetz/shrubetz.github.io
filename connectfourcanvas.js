@@ -60,7 +60,7 @@ else
 }
 
 }
-function taketurn(var codx,var cody)
+function taketurn(cordx,cordy)
 {
 	  ctx.fillStyle = choosecolor();
 	   ctx.beginPath();
