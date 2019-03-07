@@ -90,31 +90,31 @@ if (y<5)
 	return y;
 }
 
-function checkWinner(game) {
-	alert(game)
+function checkWinner() {
+	
     // Check down
     for (x = 0; x < 3; x++){
 	for (y= 0; y < 7; y++){
-	    if (checkLine(game[x][y], game[x+1][y], game[x+2][y], game[x+3][y])){
-		return game[x][y];}}}
+	    if (checkLine(board[x][y], board[x+1][y], board[x+2][y], board[x+3][y])){
+		return board[x][y];}}}
 
     // Check right
     for (x = 0; x < 6; x++){
         for (y = 0; y < 4; y++){
-            if (checkLine(game[x][y], game[x][y+1], game[x][y+2], game[x][y+3])){
-                return game[x][y];}}}
+            if (checkLine(board[x][y], board[x][y+1], board[x][y+2], board[x][y+3])){
+                return board[x][y];}}}
 
     // Check down-right
     for (x = 0; x < 3; x++){
         for (y = 0; y < 4; y++){
-            if (checkLine(game[x][y], game[x+1][y+1], game[x+2][y+2], game[x+3][y+3])){
-                return game[x][y];}}}
+            if (checkLine(board[x][y], board[x+1][y+1], board[x+2][y+2], board[x+3][y+3])){
+                return board[x][y];}}}
 
     // Check down-left
     for (x = 3; x < 6; x++){
         for (y = 0; y < 4; y++){
-            if (checkLine(game[x][y], game[x-1][y+1], game[x-2][y+2], game[x-3][y+3])){
-                return game[x][y];}}}
+            if (checkLine(board[x][y], board[x-1][y+1], board[x-2][y+2], board[x-3][y+3])){
+                return board[x][y];}}}
 
     return 0;
 }
