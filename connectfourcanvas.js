@@ -111,16 +111,17 @@ function animateTurn(cordx,cordy,color)
 
 function checkBelow(x,y){
  color= choosecolor(x,y);
-	if (y<5)
+	if (y<6)
 {     
 	while(board[x][y+1]==0)
 		
 	{
 	//if(x>0 && y>0)
-	{ animateTurn(x-1,y-1,"white");}
-		sleep(1000);
+	
 	     animateTurn(x,y,color);
 	      sleep(1000);
+		animateTurn(x-1,y-1,"white");
+		sleep(1000);
 		y++;
 	}
 }
