@@ -117,8 +117,8 @@ var color= choosecolor(x,y);
 		
 	{
 	if(x>=0 && y>=0)
-	     animateTurn(x-1,y-1,white)
-	     animateTurn(x,y,color)
+	{animateTurn(x-1,y-1,"white");}
+	     animateTurn(x,y,color);
 	      sleep(1000);
 		y++;
 	}
