@@ -34,7 +34,7 @@ $("#myCanvas").click(function(e){
       { 
        cordy=checkBelow(cordx,cordy);
 	      
-	     drawturn(cordx,cordy);
+	    // drawturn(cordx,cordy);
 	      if (colblue==1)
 {
 	board[cordx][cordy]=1;
