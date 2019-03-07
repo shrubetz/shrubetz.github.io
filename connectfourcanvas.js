@@ -9,15 +9,7 @@ ctx.fillRect(0, 0, 700, 600);
  for (var i=0;i<7;i++) {
      board[i] = [];
   }
-for(x=0;x<7;x++){
-  for(y=0;y<6;y++){  
-	   board[x][y]=0;
-       ctx.fillStyle = "white";
-	   //ctx.fillRect(x*100+10, y*100+10, 80, 80); 
-	   ctx.beginPath();
-	   ctx.arc(x*100+50,y*100+50,40,0,2*Math.PI);
-	   ctx.fill();
-       ctx.stroke();
+clearBoard();
 	
 	   
   }
@@ -47,8 +39,8 @@ $("#myCanvas").click(function(e){
 	      
 	     player=checkWinner() 
 	     if (player !=0)
-	    {alert("player " + player);}
-      
+	    {alert("The winner is player " + player);}
+           clearBoard();
       }
 	else{}
 	});
@@ -126,4 +118,17 @@ function checkLine(a,b,c,d) {
     // Check first cell non-zero and all cells match
 	//alert((a=1||a==2 ) && (a ==b) && (a == c) && (a == d));
     return ((a == 1 || a==2) && (a ==b) && (a == c) && (a == d));
+}
+
+function clearBoard(){
+	for(x=0;x<7;x++){
+  for(y=0;y<6;y++){  
+	   board[x][y]=0;
+       ctx.fillStyle = "white";
+	  
+	   ctx.beginPath();
+	   ctx.arc(x*100+50,y*100+50,40,0,2*Math.PI);
+	   ctx.fill();
+       ctx.stroke();
+	
 }
