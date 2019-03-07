@@ -3,7 +3,7 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var player=0;
 var colblue=1;
-
+var color ="white";
 ctx.fillStyle="yellow";
 ctx.fillRect(0, 0, 700, 600);
 
@@ -92,7 +92,7 @@ else
 }
 function drawturn(cordx,cordy)
 {
-	  ctx.fillStyle = choosecolor(cordx,cordy);
+	  ctx.fillStyle = color;
 	   ctx.beginPath();
        ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
 	  ctx.fill();
@@ -110,14 +110,15 @@ function animateTurn(cordx,cordy,color)
 
 
 function checkBelow(x,y){
-var color= choosecolor(x,y);
+ color= choosecolor(x,y);
 	if (y<5)
 {     
 	while(board[x][y+1]==0)
 		
 	{
 	if(x>=0 && y>=0)
-	{animateTurn(x-1,y-1,"white");}
+	{ animateTurn(x-1,y-1,"white");}
+		sleep(1000);
 	     animateTurn(x,y,color);
 	      sleep(1000);
 		y++;
