@@ -95,34 +95,35 @@ function checkWinner() {
     // Check down
     for (x = 0; x < 3; x++){
 	for (y= 0; y < 7; y++){
-	    if (checkLine(board[x][y], board[x+1][y], board[x+2][y], board[x+3][y])){
-		player= board[x][y];
+	    if (checkLine(board[x][y], board[x+1][y], board[x+2][y], board[x+3][y])==1){
+		return board[x][y];
 	    }}}
 
     // Check right
     for (x = 0; x < 6; x++){
         for (y = 0; y < 4; y++){
-            if (checkLine(board[x][y], board[x][y+1], board[x][y+2], board[x][y+3])){
-                player= board[x][y];
+            if (checkLine(board[x][y], board[x][y+1], board[x][y+2], board[x][y+3])==1){
+                return board[x][y];
 	    }}}
 
     // Check down-right
     for (x = 0; x < 3; x++){
         for (y = 0; y < 4; y++){
-            if (checkLine(board[x][y], board[x+1][y+1], board[x+2][y+2], board[x+3][y+3])){
-                player= board[x][y];
+            if (checkLine(board[x][y], board[x+1][y+1], board[x+2][y+2], board[x+3][y+3])==1){
+               return board[x][y];
 	    }}}
 
     // Check down-left
     for (x = 3; x < 6; x++){
         for (y = 0; y < 4; y++){
-            if (checkLine(board[x][y], board[x-1][y+1], board[x-2][y+2], board[x-3][y+3])){
-               player= board[x][y];
+            if (checkLine(board[x][y], board[x-1][y+1], board[x-2][y+2], board[x-3][y+3])==1){
+               return board[x][y];
 	    }}}
 
     
 }
 function checkLine(a,b,c,d) {
     // Check first cell non-zero and all cells match
+	alert((a != 0) && (a ==b) && (a == c) && (a == d));
     return ((a != 0) && (a ==b) && (a == c) && (a == d));
 }
