@@ -79,8 +79,8 @@ function animateTurn(cordx,cordy,color)
 function checkBelow(x,y){
     color= choosecolor();
     
-          
-        while(board[x][y+1]==0&&y<5)
+       //  for (y<5) 
+        while(board[x][y]==0&&y<6)
 
             {
             //if(x>0 && y>0)
@@ -92,9 +92,7 @@ function checkBelow(x,y){
             //sleep(1000);
             y++;
             }
-	alert("Wait for 5 seconds.");
-        sleep(5000)
-        alert("5 seconds passed.");
+	
         
     return y;
     }
