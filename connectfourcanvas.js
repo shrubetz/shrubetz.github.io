@@ -54,7 +54,7 @@ function isWinner()
         }
     }
 
-function choosecolor(cordx,cordy){
+function choosecolor(){
     if (colblue==1)
         {
         colblue=0;
@@ -77,10 +77,10 @@ function animateTurn(cordx,cordy,color)
 
 
 function checkBelow(x,y){
-    color= choosecolor(x,y);
-    if (y<6)
-        {     
-        while(board[x][y+1]==0)
+    color= choosecolor();
+    
+          
+        while(board[x][y+1]==0&&y<6)
 
             {
             //if(x>0 && y>0)
@@ -91,7 +91,7 @@ function checkBelow(x,y){
             //sleep(1000);
             y++;
             }
-        }
+        
     return y;
     }
 
