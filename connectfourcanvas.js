@@ -86,8 +86,9 @@ function checkBelow(x,y){
             //if(x>0 && y>0)
 
             animateTurn(x,y,color);
+	
             //sleep(1000);
-            animateTurn(x-1,y-1,"white");
+            animateTurn(x,y-1,"white");
             //sleep(1000);
             y++;
             }
