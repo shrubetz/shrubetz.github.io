@@ -146,6 +146,7 @@ function clearBoard(){
                         }
                     }               
                      }
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+ function sleep(delay) {
+        var start = new Date().getTime();
+        while (new Date().getTime() < start + delay);
+      }
