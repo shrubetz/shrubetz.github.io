@@ -80,16 +80,16 @@ function checkBelow(x,y){
     color= choosecolor();
     
           
-        while(board[x][y+1]==0&&y<6)
+        while(board[x][y+1]==0&&y<5)
 
             {
             //if(x>0 && y>0)
 
             animateTurn(x,y,color);
 	
-            //sleep(1000);
+            sleep(2000);
             animateTurn(x,y-1,"white");
-            //sleep(1000);
+            sleep(1000);
             y++;
             }
         
