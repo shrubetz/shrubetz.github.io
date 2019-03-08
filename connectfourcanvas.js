@@ -99,7 +99,7 @@ function checkBelow(x,y){
 		animateTurn(x,y-1,"white");
 	}
         
-   
+   return y;
     }
 
 function checkWinner() {
