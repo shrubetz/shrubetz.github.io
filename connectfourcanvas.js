@@ -87,11 +87,14 @@ function checkBelow(x,y){
 
             animateTurn(x,y,color);
 	
-            await sleep(1000);
+            // sleep(1000);
             animateTurn(x,y-1,"white");
             //sleep(1000);
             y++;
             }
+	alert("Wait for 5 seconds.");
+        sleep(5000)
+        alert("5 seconds passed.");
         
     return y;
     }
