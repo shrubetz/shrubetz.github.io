@@ -80,7 +80,7 @@ function checkBelow(x,y){
     color= choosecolor();
     
        //  for (y<5) 
-        while(board[x][y+1]==0&&y<5)
+        while(board[x][y+1]==0&&y<6)
 
             {
             //if(x>0 && y>0)
