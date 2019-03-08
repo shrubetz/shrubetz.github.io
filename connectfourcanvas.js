@@ -67,7 +67,7 @@ function choosecolor(){
         }
     }
 function animateTurn(cordx,cordy,color)
-{ 
+{ sleep(1000);
     ctx.fillStyle = color;
     ctx.beginPath();
     ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
@@ -78,10 +78,12 @@ function animateTurn(cordx,cordy,color)
 
 function checkBelow(x,y){
     color= choosecolor();
-    
-       //  for (y<5) 
-        while(board[x][y+1]==0&&y<6)
-
+    y=0;
+       for (i=0;i<6;i++) 
+       {
+	
+	if(board[x][y+1]==0)
+	
             {
             //if(x>0 && y>0)
 
@@ -93,12 +95,13 @@ function checkBelow(x,y){
             //sleep(1000);
             y++;
             }
-	if (y==5 && board[x][y]==0 )
+	  
+	//if (y==5 && board[x][y]==0 )
 	{
-		animateTurn(x,y,color);
+	//	animateTurn(x,y,color);
 		//animateTurn(x,y-1,"white");
 	}
-        
+       }
    return y;
     }
 
