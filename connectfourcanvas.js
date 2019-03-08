@@ -25,108 +25,75 @@ var mouseClicked = false, mouseReleased = true;
 
 $("#myCanvas").click(function(e){
 	
-    var cordy=0;// = Math.floor((e.pageY-$("#myCanvas").offset().top) / 100);
-	
+    var cordy= 0;//Math.floor((e.pageY-$("#myCanvas").offset().top) / 100);
+
     var cordx = Math.floor((e.pageX-$("#myCanvas").offset().left) / 100);
-    //alert(board[cordx,cordy])
-	//alert(cordy+" " + cordx);
-      if (board[cordx][cordy]==0)
-      { 
-       cordy=checkBelow(cordx,cordy);
-	      
-	    // drawturn(cordx,cordy);
-	      if (colblue==1)
-{
-	board[cordx][cordy]=1;
-	
-	 
-	
-}
-else
-{
-	board[cordx][cordy]=2;
-	
-	 
-	
-}
-	      //sleep(1000);
-	   
-      }
-	
-	else{}
-	
-	isWinner();
-       
-	});
+//if (board[cordx][cordy]==0)
+    {  
+        cordy=checkBelow(cordx,cordy);
+    if (colblue==1)
+        {
+        board[cordx][cordy]=1;	
+        }
+    else
+    {
+    board[cordx][cordy]=2; 
+
+    } 
+    }
+    //else{}
+    isWinner();   
+    });
 function isWinner()
-{
-  player=checkWinner() 
-	     if (player !=0)
-	    { 
-		
-		alert("The winner is player " + player);
-		
-	          
-	       clearBoard();
-	    }
-}
+    {
+    player=checkWinner() 
+    if (player !=0)
+        { 
+        alert("The winner is player " + player); 
+        clearBoard();
+        }
+    }
 
 function choosecolor(cordx,cordy){
-if (colblue==1)
-{
-	//board[cordx][cordy]=1;
-	colblue=0;
-	return "green";
-	 
-	
-}
-else
-{
-	//board[cordx][cordy]=2;
-	colblue=1;
-	return "red";
-	 
-	
-}
-
-}
-function drawturn(cordx,cordy)
-{
-	  ctx.fillStyle = color;
-	   ctx.beginPath();
-       ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
-	  ctx.fill();
-       ctx.stroke();
-}
-
+    if (colblue==1)
+        {
+        colblue=0;
+        return "green";
+        }
+    else
+        {   
+        colblue=1;
+        return "red"; 	
+        }
+    }
 function animateTurn(cordx,cordy,color)
 { 
-	  ctx.fillStyle = color;
-	   ctx.beginPath();
-       ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
-	  ctx.fill();
-       ctx.stroke();
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
+    ctx.fill();
+    ctx.stroke();
 }
 
 
 function checkBelow(x,y){
- color= choosecolor(x,y);
-	if (y<6)
-{     
-	while(board[x][y+1]==0)
-		
-	{
-	//if(x>0 && y>0)
-	
-	     animateTurn(x,y,color);
-	      //sleep(1000);
-		animateTurn(x-1,y-1,"white");
-		//sleep(1000);
-		y++;
-	}
-}
-	return y;
-}
+    color= choosecolor(x,y);
+    if (y<6)
+        {     
+        while(board[x][y+1]==0)
+
+            {
+            //if(x>0 && y>0)
+
+            animateTurn(x,y,color);
+            //sleep(1000);
+            animateTurn(x-1,y-1,"white");
+            //sleep(1000);
+            y++;
+            }
+        }
+    return y;
+    }
 
 function checkWinner() {
 	
@@ -162,23 +129,22 @@ return 0;
 }
 function checkLine(a,b,c,d) {
     // Check first cell non-zero and all cells match
-	//alert((a=1||a==2 ) && (a ==b) && (a == c) && (a == d));
     return ((a == 1 || a==2) && (a ==b) && (a == c) && (a == d));
 }
 
 function clearBoard(){
 	for(x=0;x<7;x++){
-  for(y=0;y<6;y++){  
-	   board[x][y]=0;
-       ctx.fillStyle = "white";
-	  
-	   ctx.beginPath();
-	   ctx.arc(x*100+50,y*100+50,40,0,2*Math.PI);
-	   ctx.fill();
-       ctx.stroke();
-  }
-	}
-}
-	function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+        for(y=0;y<6;y++){  
+           board[x][y]=0;
+           ctx.fillStyle = "white";
+          
+           ctx.beginPath();
+           ctx.arc(x*100+50,y*100+50,40,0,2*Math.PI);
+           ctx.fill();
+           ctx.stroke();
+                        }
+                    }               
+                     }
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
