@@ -25,7 +25,7 @@ var mouseClicked = false, mouseReleased = true;
 
 $("#myCanvas").click(function(e){
 	
-    var cordy= 0;//Math.floor((e.pageY-$("#myCanvas").offset().top) / 100);
+    var cordy = Math.floor((e.pageY-$("#myCanvas").offset().top) / 100);
 
     var cordx = Math.floor((e.pageX-$("#myCanvas").offset().left) / 100);
 //if (board[cordx][cordy]==0)
