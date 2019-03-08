@@ -87,7 +87,7 @@ function checkBelow(x,y){
 
             animateTurn(x,y,color);
 	
-            sleep(1000);
+            await sleep(1000);
             animateTurn(x,y-1,"white");
             //sleep(1000);
             y++;
