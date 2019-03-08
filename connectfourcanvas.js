@@ -67,7 +67,7 @@ function choosecolor(){
         }
     }
 function animateTurn(cordx,cordy,color)
-{ sleep(1000);
+{ //sleep(1000);
     ctx.fillStyle = color;
     ctx.beginPath();
     ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
