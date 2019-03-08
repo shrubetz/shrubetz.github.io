@@ -79,7 +79,7 @@ function animateTurn(cordx,cordy,color)
 function checkBelow(x,y){
     color= choosecolor();
     y=0;
-       for (i=0;i<6;i++) 
+       for (i=0;i<5;i++) 
        {
 	
 	if(board[x][y+1]==0)
@@ -96,10 +96,10 @@ function checkBelow(x,y){
             y++;
             }
 	  
-	//if (y==5 && board[x][y]==0 )
+	if (y==5 && board[x][y]==0 )
 	{
-	//	animateTurn(x,y,color);
-		//animateTurn(x,y-1,"white");
+	animateTurn(x,y,color);
+		animateTurn(x,y-1,"white");
 	}
        }
    return y;
