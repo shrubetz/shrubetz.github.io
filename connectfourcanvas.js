@@ -66,11 +66,11 @@ function choosecolor(){
         return "red"; 	
         }
     }
-async function animateTurn(cordx,cordy,color)
+ function animateTurn(cordx,cordy,color)
 {  
     
     ctx.fillStyle = color;
-    await sleep(1000);
+   // await sleep(1000);
     ctx.beginPath();
     ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
     ctx.fill();
@@ -79,7 +79,7 @@ async function animateTurn(cordx,cordy,color)
 }
 
 
-function checkBelow(x,y){
+async function checkBelow(x,y){
     color= choosecolor();
     y=0;
        for (i=0;i<6;i++) 
@@ -92,7 +92,7 @@ function checkBelow(x,y){
 
             animateTurn(x,y,color);
 	
-           // await sleep(1000);
+            await sleep(1000);
 	
             animateTurn(x,y-1,"white");
 	    // alert(y);
