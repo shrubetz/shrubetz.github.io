@@ -99,7 +99,7 @@ async function checkBelow(x,y){
             //sleep(1000);
             y++;
             }
-	   await sleep(1500);
+	   await sleep(250);
 	if (board[x][y]==0 )
 	{
 	animateTurn(x,y,color);
