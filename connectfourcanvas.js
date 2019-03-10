@@ -73,7 +73,7 @@ async function animateTurn(cordx,cordy,color)
     ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
     ctx.fill();
     ctx.stroke();
-   await sleep(1000)
+   await sleep(1000);
 }
 
 
