@@ -67,7 +67,7 @@ function choosecolor(){
         }
     }
 function animateTurn(cordx,cordy,color)
-{   sleep(1000);
+{   
     ctx.fillStyle = color;
     ctx.beginPath();
     ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
@@ -91,7 +91,7 @@ function checkBelow(x,y){
 	
             // sleep(1000);
 	
-            animateTurn(x,y-1,"white");
+            setTimeout(animateTurn(x,y-1,"white"),1000);
             //sleep(1000);
             y++;
             }
