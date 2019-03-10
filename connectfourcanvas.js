@@ -92,6 +92,7 @@ function checkBelow(x,y){
             // sleep(1000);
 	
             setTimeout(animateTurn(x,y-1,"white"),1000);
+		    alert(y);
             //sleep(1000);
             y++;
             }
