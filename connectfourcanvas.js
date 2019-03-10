@@ -89,9 +89,9 @@ function checkBelow(x,y){
 
             animateTurn(x,y,color);
 	
-            // sleep(1000);
+            await sleep(1000);
 	
-            setTimeout(animateTurn(x,y-1,"white"),1000);
+            animateTurn(x,y-1,"white");
 		    alert(y);
             //sleep(1000);
             y++;
@@ -156,7 +156,6 @@ function clearBoard(){
                         }
                     }               
                      }
- function sleep(delay) {
-        var start = new Date().getTime();
-        while (new Date().getTime() < start + delay);
+ function sleep(ms) {
+          return new Promise(resolve => setTimeout(resolve, ms));
       }
