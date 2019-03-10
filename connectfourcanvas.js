@@ -67,13 +67,15 @@ function choosecolor(){
         }
     }
 async function animateTurn(cordx,cordy,color)
-{   
+{  
+    
     ctx.fillStyle = color;
     ctx.beginPath();
     ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
     ctx.fill();
+    await sleep(1000);
     ctx.stroke();
-   await sleep(1000);
+   
 }
 
 
