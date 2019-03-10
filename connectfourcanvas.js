@@ -92,7 +92,7 @@ async function checkBelow(x,y){
 
             animateTurn(x,y,color);
 	
-            await sleep(1000);
+            await sleep(250);
 	
             animateTurn(x,y-1,"white");
 	    // alert(y);
