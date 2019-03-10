@@ -92,7 +92,7 @@ function checkBelow(x,y){
             await sleep(1000);
 	
             animateTurn(x,y-1,"white");
-		    alert(y);
+	    // alert(y);
             //sleep(1000);
             y++;
             }
