@@ -3,6 +3,7 @@ var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 var player=0;
 var colblue=1;
+var running=false;
 var color ="white";
 ctx.fillStyle="yellow";
 ctx.fillRect(0, 0, 700, 600);
@@ -28,7 +29,7 @@ $("#myCanvas").click(function(e){
     var cordy = 0;Math.floor((e.pageY-$("#myCanvas").offset().top) / 100);
 
     var cordx = Math.floor((e.pageX-$("#myCanvas").offset().left) / 100);
-//if (board[cordx][cordy]==0)
+if (running==false)
     {  
         cordy=checkBelow(cordx,cordy);
     if (colblue==1)
@@ -80,7 +81,8 @@ function choosecolor(){
 
 
 async function checkBelow(x,y){
-    color= choosecolor();
+   running=true; 
+   color= choosecolor();
     y=0;
        for (i=0;i<6;i++) 
        {
@@ -106,6 +108,7 @@ async function checkBelow(x,y){
 		animateTurn(x,y-1,"white");
 	}
        }
+	running=false;
    return y;
     }
 
