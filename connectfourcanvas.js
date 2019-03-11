@@ -169,11 +169,12 @@ function checkLine(a,b,c,d) {
 }
 
 async function clearBoard(){
+	 await sleep(1000);
 	for(x=0;x<7;x++){
         for(y=0;y<6;y++){  
            board[x][y]=0;
            ctx.fillStyle = "white";
-           await sleep(1000);
+          
            ctx.beginPath();
            ctx.arc(x*100+50,y*100+50,40,0,2*Math.PI);
            ctx.fill();
