@@ -77,6 +77,7 @@ async function animateTurn(cordx,cordy)
 {  //original variables since they may get updated
     var orgx=cordx;
     var orgy=cordy;
+	var dummyvar=1;
     running=true; 
     color= choosecolor();
     
@@ -88,18 +89,18 @@ async function animateTurn(cordx,cordy)
                 {
 
                 drawCircle(orgx,i,color);
-		 await sleep(250);         
+		// await sleep(250);         
                 drawCircle(orgx,i-1,"white");
-               
-			
+               await sleep(250);
+		dummyvar=2;	
                 }
            
         //if (board[orgx][orgy]==0 )
       
        }
 	  {
-          //  drawCircle(orgx,orgy,color);
-            //drawCircle(orgx,orgy-1,"white");
+            drawCircle(orgx,orgy,color);
+            drawCircle(orgx,orgy-1,"white");
         }
 	running=false;
  
