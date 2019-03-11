@@ -174,7 +174,7 @@ checkTie()
 	for (x = 0; x < 7; x++){
         for (y = 0; y < 6; y++){
 		if (board[x][y]==0)
-			return 0;
+			return 1;
 	}}
 		{alert("There is a tie");
 		clearBoard();}
