@@ -32,6 +32,7 @@ $("#myCanvas").click(function(e){
 if (running==false)
     {  
         cordy=checkBelow(cordx,cordy);
+	    alert(cordy);
         animateTurn(cordx,cordy)
     
     if (colblue==1)
@@ -43,7 +44,7 @@ if (running==false)
     board[cordx][cordy]=2; 
 
     } 
-    alert(cordy+" "+ board[cordx][cordy]);
+    //alert(cordy+" "+ board[cordx][cordy]);
     
     isWinner();   
     }
@@ -76,7 +77,7 @@ async function animateTurn(cordx,cordy)
     
     running=true; 
     color= choosecolor();
-    
+    alert(y);
        for (i=0;i<y;i++) 
        {
 	
@@ -88,7 +89,7 @@ async function animateTurn(cordx,cordy)
         
                 drawCircle(x,y-1,"white");
                 await sleep(250); 
-			alert(y);
+			
                 }
            
       //  if (board[x][y]==0 )
