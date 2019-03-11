@@ -174,12 +174,12 @@ checkTie()
 	for (x = 0; x < 7; x++){
         for (y = 0; y < 6; y++){
 		if (board[x][y]==0)
-			return
-		else()
+			return 0;
+	}}
 		{alert("There is a tie");
 		clearBoard();}
 
-	}}
+	
 }
 
 function checkLine(a,b,c,d) {
