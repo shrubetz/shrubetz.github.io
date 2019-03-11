@@ -41,9 +41,10 @@ if (running==false)
     board[cordx][cordy]=2; 
 
     } 
-    }
+    alert(cordy+" "+ board[cordx][cordy]);
     //else{}
     isWinner();   
+    }
     });
 function isWinner()
     {
@@ -53,6 +54,7 @@ function isWinner()
         alert("The winner is player " + player); 
         clearBoard();
         }
+    
     }
 
 function choosecolor(){
@@ -109,7 +111,7 @@ async function checkBelow(x,y){
 	}
        }
 	running=false;
-	alert(y+" "+ board[x][y]);
+	
    return y;
     }
 
