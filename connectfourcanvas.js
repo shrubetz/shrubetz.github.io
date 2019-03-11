@@ -70,7 +70,7 @@ function choosecolor(){
         return "red"; 	
         }
     }
- function animateTurn(cordx,cordy)
+async function animateTurn(cordx,cordy)
 {  
     
   running=true; 
@@ -106,7 +106,7 @@ function choosecolor(){
    
 }
 
-async function drawCircle(x,y,color){
+ function drawCircle(x,y,color){
   ctx.fillStyle = color;
    // await sleep(1000);
     ctx.beginPath();
