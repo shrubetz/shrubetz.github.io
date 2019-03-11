@@ -77,8 +77,8 @@ async function animateTurn(cordx,cordy)
     
     running=true; 
     color= choosecolor();
-    alert(y);
-       for (i=0;i<y;i++) 
+    alert(cordy);
+       for (i=0;i<cordy;i++) 
        {
 	
         //if(board[x][y+1]==0)
