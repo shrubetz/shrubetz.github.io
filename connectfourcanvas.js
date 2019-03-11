@@ -108,12 +108,13 @@ async function animateTurn(cordx,cordy)
     ctx.beginPath();
     ctx.arc(x*100+50, y*100+50, 40, 0,2*Math.PI);
     ctx.fill();
+	 alert(color);
     ctx.stroke();
 }
   function checkBelow(x,y){
    
   
-    y=0;
+   
        for (i=0;i<6;i++) 
        {
 	
