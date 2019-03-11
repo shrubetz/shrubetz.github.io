@@ -50,14 +50,17 @@ if (running==false)
     isWinner();   
     }
     });
-function isWinner()
+async function isWinner()
     {
+	    running=true;
     player=checkWinner() 
     if (player !=0)
         { 
+		await sleep(500);
         alert("The winner is player " + player); 
         clearBoard();
         }
+	    running=false;
     
     }
 
@@ -169,7 +172,7 @@ function checkLine(a,b,c,d) {
 }
 
 async function clearBoard(){
-	 await sleep(1000);
+	 await sleep(500);
 	for(x=0;x<7;x++){
         for(y=0;y<6;y++){  
            board[x][y]=0;
