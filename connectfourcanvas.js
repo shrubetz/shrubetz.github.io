@@ -98,8 +98,8 @@ async function animateTurn(cordx,cordy)
       
        }
 	  {
-            drawCircle(orgx,orgy,color);
-            drawCircle(orgx,orgy-1,"white");
+          //  drawCircle(orgx,orgy,color);
+            //drawCircle(orgx,orgy-1,"white");
         }
 	running=false;
  
