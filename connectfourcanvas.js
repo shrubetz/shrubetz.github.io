@@ -92,7 +92,7 @@ async function animateTurn(cordx,cordy)
                 y++;
                 }
            
-        if (board[x][y]==0 )
+       // if (board[x][y]==0 )
         {
             drawCircle(x,y,color);
             drawCircle(x,y-1,"white");
@@ -137,7 +137,7 @@ async function animateTurn(cordx,cordy)
 		//drawCircle(x,y-1,"white");
 	}
        }
-	alert(y);
+	
 	
    return y;
     }
