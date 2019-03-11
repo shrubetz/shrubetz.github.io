@@ -178,7 +178,7 @@ checkTie()
 	}}
 		{alert("There is a tie");
 		clearBoard();}
-
+return 0;
 	
 }
 
