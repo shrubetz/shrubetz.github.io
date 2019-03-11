@@ -44,7 +44,7 @@ if (running==false)
 
     } 
     alert(cordy+" "+ board[cordx][cordy]);
-    //else{}
+    
     isWinner();   
     
     });
@@ -77,10 +77,10 @@ async function animateTurn(cordx,cordy)
     running=true; 
     color= choosecolor();
     
-       for (i=0;i<6;i++) 
+       for (i=0;i<y;i++) 
        {
 	
-        if(board[x][y+1]==0)
+        //if(board[x][y+1]==0)
         
                 {
 
