@@ -47,7 +47,12 @@ if (running==false)
     //alert(cordy+" "+ board[cordx][cordy]);
     
     isWinner();   
-	    checkTie();
+	var isTie= checkTie();
+	    if (isTie==0)
+	    {
+		    alert("There is a tie");
+		    clearBoard();
+	    }
     }
     });
 async function isWinner()
