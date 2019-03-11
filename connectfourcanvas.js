@@ -32,7 +32,7 @@ $("#myCanvas").click(function(e){
 if (running==false)
     {  
         cordy=checkBelow(cordx,cordy);
-	    alert(cordy);
+	  
         animateTurn(cordx,cordy)
     
     if (colblue==1)
@@ -85,9 +85,9 @@ async function animateTurn(cordx,cordy)
         
                 {
 
-                drawCircle(x,y,color);
+                drawCircle(cordx,cordy,color);
         
-                drawCircle(x,y-1,"white");
+                drawCircle(x,cordy-1,"white");
                 await sleep(250); 
 			
                 }
@@ -96,8 +96,8 @@ async function animateTurn(cordx,cordy)
       
        }
 	  {
-            drawCircle(x,y,color);
-            drawCircle(x,y-1,"white");
+            drawCircle(cordx,cordy,color);
+            drawCircle(cordx,cordy-1,"white");
         }
 	running=false;
  
