@@ -32,9 +32,10 @@ $("#myCanvas").click(function(e){
 if (running==false)
     {  
         cordy=checkBelow(cordx,cordy);
+    }
 	  
         animateTurn(cordx,cordy)
-    
+    if(running==false){
     if (colblue==1)
         {
         board[cordx][cordy]=1;	
