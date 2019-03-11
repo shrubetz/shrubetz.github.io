@@ -25,15 +25,14 @@ var width = 700;
 var mouseClicked = false, mouseReleased = true;
 
 $("#myCanvas").click(function(e){
-	
+if (running==false)
+    {  	
     var cordy = 0;//Math.floor((e.pageY-$("#myCanvas").offset().top) / 100);
 
     var cordx = Math.floor((e.pageX-$("#myCanvas").offset().left) / 100);
-if (running==false)
-    {  
+
         cordy=checkBelow(cordx,cordy);
-    
-	  
+    if (board[cordx][cordy]==0)
         animateTurn(cordx,cordy)
     
     if (colblue==1)
