@@ -76,7 +76,7 @@ function choosecolor(){
 async function animateTurn(cordx,cordy)
 {  //original variables since they may get updated
     var orgx=cordx;
-	Var orgy=cordy;
+    var orgy=cordy;
     running=true; 
     color= choosecolor();
     
