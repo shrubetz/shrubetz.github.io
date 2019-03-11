@@ -9,7 +9,7 @@ ctx.fillStyle="yellow";
 ctx.fillRect(0, 0, 700, 600);
 
  for (var i=0;i<7;i++) {
-     board[i] = [];
+  board[i] = [];
   }
 clearBoard();
 	
@@ -57,7 +57,7 @@ function isWinner()
         clearBoard();
         }
     
-    
+    }
 
 function choosecolor(){
     if (colblue==1)
@@ -74,32 +74,29 @@ function choosecolor(){
 async function animateTurn(cordx,cordy)
 {  
     
-  running=true; 
-   color= choosecolor();
+    running=true; 
+    color= choosecolor();
     
        for (i=0;i<6;i++) 
        {
 	
-	if(board[x][y+1]==0)
-	
-            {
-            //if(x>0 && y>0)
+        if(board[x][y+1]==0)
+        
+                {
 
+                drawCircle(x,y,color);
+        
+                await sleep(250);
+        
+                drawCircle(x,y-1,"white");
+                y++;
+                }
+           
+        if (board[x][y]==0 )
+        {
             drawCircle(x,y,color);
-	
-            await sleep(250);
-	
             drawCircle(x,y-1,"white");
-	    // alert(y);
-            //sleep(1000);
-            y++;
-            }
-	   
-	if (board[x][y]==0 )
-	{
-	drawCircle(x,y,color);
-		drawCircle(x,y-1,"white");
-	}
+        }
        }
 	running=false;
  
