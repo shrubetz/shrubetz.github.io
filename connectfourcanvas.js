@@ -91,7 +91,7 @@ async function animateTurn(cordx,cordy)
                 drawCircle(orgx,i,color);
 		// await sleep(250);         
                 drawCircle(orgx,i-1,"white");
-               await sleep(250);
+               await sleep(125);
 		dummyvar=2;	
                 }
            
@@ -168,12 +168,12 @@ function checkLine(a,b,c,d) {
     return ((a == 1 || a==2) && (a ==b) && (a == c) && (a == d));
 }
 
-function clearBoard(){
+async function clearBoard(){
 	for(x=0;x<7;x++){
         for(y=0;y<6;y++){  
            board[x][y]=0;
            ctx.fillStyle = "white";
-          
+           await sleep(1000);
            ctx.beginPath();
            ctx.arc(x*100+50,y*100+50,40,0,2*Math.PI);
            ctx.fill();
