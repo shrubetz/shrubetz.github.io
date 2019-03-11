@@ -5,6 +5,7 @@ var player=0;
 var colblue=1;
 var running=false;
 var color ="white";
+var hoverx;
 ctx.fillStyle="yellow";
 ctx.fillRect(0, 0, 700, 600);
 
@@ -17,12 +18,29 @@ clearBoard();
 
 
 var canvas = document.getElementById("myCanvas")[0];
+document.getElementById("myCanvas").onmouseover = function() {mouseOver()};
+document.getElementById("myCanvas").onmouseout = function() {mouseOut()};
 
+function mouseOver() {
+  var cordy = 0;
+
+    hoverx = Math.floor((e.pageX-$("#myCanvas").offset().left) / 100);
+	  drawCircle(hoverx,0,"blue");
+}
+
+function mouseOut() {
+   var cordy = 0;
+
+   drawCircle(hoverx,0,"white");
+}
 
 var height = 600;
 var width = 700;
 
 var mouseClicked = false, mouseReleased = true;
+
+
+
 
 $("#myCanvas").click(function(e){
 if (running==false)
