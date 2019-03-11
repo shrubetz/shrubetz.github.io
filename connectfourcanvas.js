@@ -176,8 +176,8 @@ function checkTie()
 		if (board[x][y]==0)
 			return 1;
 	
-alert("There is a tie");
-clearBoard();
+//alert("There is a tie");
+//clearBoard();
 return 0;
 	
 }
