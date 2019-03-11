@@ -56,7 +56,7 @@ async function isWinner()
     player=checkWinner() 
     if (player !=0)
         { 
-		await sleep(500);
+		await sleep(750);
         alert("The winner is player " + player); 
         clearBoard();
         }
@@ -172,7 +172,7 @@ function checkLine(a,b,c,d) {
 }
 
 async function clearBoard(){
-	 await sleep(500);
+	// await sleep(500);
 	for(x=0;x<7;x++){
         for(y=0;y<6;y++){  
            board[x][y]=0;
