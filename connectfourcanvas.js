@@ -47,6 +47,7 @@ if (running==false)
     //alert(cordy+" "+ board[cordx][cordy]);
     
     isWinner();   
+	    checkTie();
     }
     });
 async function isWinner()
@@ -162,9 +163,25 @@ function checkWinner() {
             if (checkLine(board[x][y], board[x-1][y+1], board[x-2][y+2], board[x-3][y+3])){
                return board[x][y];
 	    }}}
+	
+
 return 0;
     
 }
+
+checkTie()
+{
+	for (x = 0; x < 7; x++){
+        for (y = 0; y < 6; y++){
+		if (board[x][y]==0)
+			return
+		else()
+		{alert("There is a tie");
+		clearBoard();}
+
+	}}
+}
+
 function checkLine(a,b,c,d) {
     // Check first cell non-zero and all cells match
     return ((a == 1 || a==2) && (a ==b) && (a == c) && (a == d));
