@@ -88,6 +88,7 @@ async function animateTurn(cordx,cordy)
         
                 drawCircle(x,y-1,"white");
                 await sleep(250); 
+			alert(y);
                 }
            
       //  if (board[x][y]==0 )
