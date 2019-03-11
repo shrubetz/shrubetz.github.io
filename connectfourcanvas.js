@@ -84,7 +84,7 @@ async function animateTurn(cordx,cordy)
     color= choosecolor();
     
        for (i=0;i<orgy;i++) 
-       {
+       {running=true; 
 	
         //if(board[x][y+1]==0)
         
@@ -94,7 +94,7 @@ async function animateTurn(cordx,cordy)
 		// await sleep(250);         
                 drawCircle(orgx,i-1,"white");
                await sleep(125);
-		dummyvar=2;	
+		running=true; 	
                 }
            
         //if (board[orgx][orgy]==0 )
