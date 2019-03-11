@@ -106,7 +106,7 @@ async function animateTurn(cordx,cordy)
   ctx.fillStyle = color;
    // await sleep(1000);
     ctx.beginPath();
-    ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
+    ctx.arc(x*100+50, y*100+50, 40, 0,2*Math.PI);
     ctx.fill();
     ctx.stroke();
 }
