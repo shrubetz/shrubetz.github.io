@@ -33,6 +33,7 @@ if (running==false)
     {  
         cordy=checkBelow(cordx,cordy);
         animateTurn(cordx,cordy)
+    }
     if (colblue==1)
         {
         board[cordx][cordy]=1;	
@@ -56,7 +57,7 @@ function isWinner()
         clearBoard();
         }
     
-    }
+    
 
 function choosecolor(){
     if (colblue==1)
@@ -76,7 +77,7 @@ async function animateTurn(cordx,cordy)
   running=true; 
    color= choosecolor();
     
-       for (i=0;i<y;i++) 
+       for (i=0;i<6;i++) 
        {
 	
 	if(board[x][y+1]==0)
@@ -93,7 +94,7 @@ async function animateTurn(cordx,cordy)
             //sleep(1000);
             y++;
             }
-	   await sleep(255);
+	   
 	if (board[x][y]==0 )
 	{
 	drawCircle(x,y,color);
@@ -101,9 +102,7 @@ async function animateTurn(cordx,cordy)
 	}
        }
 	running=false;
-	
-   
-   
+ 
 }
 
  function drawCircle(x,y,color){
@@ -141,7 +140,7 @@ async function animateTurn(cordx,cordy)
 		//drawCircle(x,y-1,"white");
 	}
        }
-	
+	alert(y);
 	
    return y;
     }
