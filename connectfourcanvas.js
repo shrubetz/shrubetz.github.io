@@ -86,18 +86,17 @@ async function animateTurn(cordx,cordy)
 
                 drawCircle(x,y,color);
         
-                await sleep(250);
-        
                 drawCircle(x,y-1,"white");
-                
+                await sleep(250); 
                 }
            
-       // if (board[x][y]==0 )
-        {
+      //  if (board[x][y]==0 )
+      
+       }
+	  {
             drawCircle(x,y,color);
             drawCircle(x,y-1,"white");
         }
-       }
 	running=false;
  
 }
@@ -108,12 +107,10 @@ async function animateTurn(cordx,cordy)
     ctx.beginPath();
     ctx.arc(x*100+50, y*100+50, 40, 0,2*Math.PI);
     ctx.fill();
-	 alert(color);
     ctx.stroke();
 }
   function checkBelow(x,y){
    
-  
    
        for (i=0;i<6;i++) 
        {
@@ -124,10 +121,7 @@ async function animateTurn(cordx,cordy)
 	   
             y++;
             }
-	  
-	
        }
-	
 	
    return y;
     }
