@@ -46,7 +46,7 @@ if (running==false)
     alert(cordy+" "+ board[cordx][cordy]);
     //else{}
     isWinner();   
-    }
+    
     });
 function isWinner()
     {
