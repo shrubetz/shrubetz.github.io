@@ -32,10 +32,10 @@ $("#myCanvas").click(function(e){
 if (running==false)
     {  
         cordy=checkBelow(cordx,cordy);
-    }
+    
 	  
         animateTurn(cordx,cordy)
-    if(running==false){
+    
     if (colblue==1)
         {
         board[cordx][cordy]=1;	
@@ -74,31 +74,32 @@ function choosecolor(){
         }
     }
 async function animateTurn(cordx,cordy)
-{  
-    
+{  //original variables since they may get updated
+    var orgx=cordx;
+	Var orgy=cordy;
     running=true; 
     color= choosecolor();
     
-       for (i=0;i<cordy;i++) 
+       for (i=0;i<orgy;i++) 
        {
 	
         //if(board[x][y+1]==0)
         
                 {
 
-                drawCircle(cordx,cordy,color);
+                drawCircle(orgx,orgy,color);
 		 await sleep(250);         
-                drawCircle(x,cordy-1,"white");
+                drawCircle(orgx,orgy-1,"white");
                
 			
                 }
            
-      //  if (board[x][y]==0 )
+        //if (board[orgx][orgy]==0 )
       
        }
 	  {
-            drawCircle(cordx,cordy,color);
-            drawCircle(cordx,cordy-1,"white");
+            drawCircle(orgx,orgy,color);
+            drawCircle(orgx,orgy-1,"white");
         }
 	running=false;
  
