@@ -77,7 +77,7 @@ async function animateTurn(cordx,cordy)
     
     running=true; 
     color= choosecolor();
-    alert(cordy);
+    
        for (i=0;i<cordy;i++) 
        {
 	
@@ -86,9 +86,9 @@ async function animateTurn(cordx,cordy)
                 {
 
                 drawCircle(cordx,cordy,color);
-        
+		 await sleep(250);         
                 drawCircle(x,cordy-1,"white");
-                await sleep(250); 
+               
 			
                 }
            
