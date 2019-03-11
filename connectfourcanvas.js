@@ -32,6 +32,7 @@ $("#myCanvas").click(function(e){
 if (running==false)
     {  
         cordy=checkBelow(cordx,cordy);
+        animateTurn(cordx,cordy)
     if (colblue==1)
         {
         board[cordx][cordy]=1;	
@@ -69,24 +70,13 @@ function choosecolor(){
         return "red"; 	
         }
     }
- function animateTurn(cordx,cordy,color)
+ function animateTurn(cordx,cordy)
 {  
     
-    ctx.fillStyle = color;
-   // await sleep(1000);
-    ctx.beginPath();
-    ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
-    ctx.fill();
-    ctx.stroke();
-   
-}
-
-
-async function checkBelow(x,y){
-   running=true; 
+  running=true; 
    color= choosecolor();
-    y=0;
-       for (i=0;i<6;i++) 
+    
+       for (i=0;i<y;i++) 
        {
 	
 	if(board[x][y+1]==0)
@@ -94,11 +84,11 @@ async function checkBelow(x,y){
             {
             //if(x>0 && y>0)
 
-            animateTurn(x,y,color);
+            drawCircle(x,y,color);
 	
             await sleep(250);
 	
-            animateTurn(x,y-1,"white");
+            drawCircle(x,y-1,"white");
 	    // alert(y);
             //sleep(1000);
             y++;
@@ -106,11 +96,52 @@ async function checkBelow(x,y){
 	   await sleep(255);
 	if (board[x][y]==0 )
 	{
-	animateTurn(x,y,color);
-		animateTurn(x,y-1,"white");
+	drawCircle(x,y,color);
+		drawCircle(x,y-1,"white");
 	}
        }
 	running=false;
+	
+   
+   
+}
+
+async function drawCircle(x,y,color){
+  ctx.fillStyle = color;
+   // await sleep(1000);
+    ctx.beginPath();
+    ctx.arc(cordx*100+50, cordy*100+50, 40, 0,2*Math.PI);
+    ctx.fill();
+    ctx.stroke();
+}
+  function checkBelow(x,y){
+   
+  
+    y=0;
+       for (i=0;i<6;i++) 
+       {
+	
+	if(board[x][y+1]==0)
+	
+            {
+           
+
+           // drawCircle(x,y,color);
+	
+           // await sleep(250);
+	
+           // drawCircle(x,y-1,"white");
+	   
+            y++;
+            }
+	  
+	if (board[x][y]==0 )
+	{
+	//drawCircle(x,y,color);
+		//drawCircle(x,y-1,"white");
+	}
+       }
+	
 	
    return y;
     }
