@@ -87,9 +87,9 @@ async function animateTurn(cordx,cordy)
         
                 {
 
-                drawCircle(orgx,orgy,color);
+                drawCircle(orgx,i,color);
 		 await sleep(250);         
-                drawCircle(orgx,orgy-1,"white");
+                drawCircle(orgx,i-1,"white");
                
 			
                 }
