@@ -26,7 +26,7 @@ var mouseClicked = false, mouseReleased = true;
 
 $("#myCanvas").click(function(e){
 	
-    var cordy = 0;Math.floor((e.pageY-$("#myCanvas").offset().top) / 100);
+    var cordy = 0;//Math.floor((e.pageY-$("#myCanvas").offset().top) / 100);
 
     var cordx = Math.floor((e.pageX-$("#myCanvas").offset().left) / 100);
 if (running==false)
@@ -101,7 +101,7 @@ async function checkBelow(x,y){
             //sleep(1000);
             y++;
             }
-	   await sleep(250);
+	   await sleep(255);
 	if (board[x][y]==0 )
 	{
 	animateTurn(x,y,color);
@@ -109,6 +109,7 @@ async function checkBelow(x,y){
 	}
        }
 	running=false;
+	alert(y+" "+ board[x][y]);
    return y;
     }
 
